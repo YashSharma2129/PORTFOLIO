@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
+import profile1 from "../../Assets/WhatsApp Image 2024-12-27 at 10.58.32_4732123a.jpg
+import profile2 from "../../Assets/WhatsApp Image 2024-12-26 at 23.22.14_13cebc77.jpg
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -57,6 +59,29 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
+
+        {/* Section to Add Photos */}
+        <Row className="photo-section">
+          <Col md={6} className="photo-column">
+            <Tilt>
+              <img
+                src={profile1}
+                alt="Profile 1"
+                className="img-fluid rounded-photo"
+              />
+            </Tilt>
+          </Col>
+          <Col md={6} className="photo-column">
+            <Tilt>
+              <img
+                src={profile2}
+                alt="Profile 2"
+                className="img-fluid rounded-photo"
+              />
+            </Tilt>
+          </Col>
+        </Row>
+
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
