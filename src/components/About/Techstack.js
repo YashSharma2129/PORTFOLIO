@@ -28,49 +28,79 @@ import {
   SiFirebase,
 } from "react-icons/si";
 
-const skills = [
-  { icon: <SiTypescript />, label: "TypeScript" },
-  { icon: <DiJavascript1 />, label: "JavaScript" },
-  { icon: <DiNodejs />, label: "Node.js" },
-  { icon: <SiExpress />, label: "Express" },
-  { icon: <DiReact />, label: "React" },
-  { icon: <SiNextdotjs />, label: "Next.js" },
-  { icon: <SiNestjs />, label: "NestJS" },
-  { icon: <SiFastapi />, label: "FastAPI" },
-  { icon: <SiPostgresql />, label: "PostgreSQL" },
-  { icon: <DiMongodb />, label: "MongoDB" },
-  { icon: <SiMysql />, label: "MySQL" },
-  { icon: <SiPrisma />, label: "Prisma" },
-  { icon: <SiRedis />, label: "Redis" },
-  { icon: <SiGraphql />, label: "GraphQL" },
-  { icon: <SiAmazonaws />, label: "AWS" },
-  { icon: <SiDocker />, label: "Docker" },
-  { icon: <SiJsonwebtokens />, label: "JWT" },
-  { icon: <SiSocketdotio />, label: "WebSocket" },
-  { icon: <SiFirebase />, label: "Firebase" },
-  { icon: <DiPython />, label: "Python" },
-  { icon: <CgCPlusPlus />, label: "C++" },
-  { icon: <SiTailwindcss />, label: "Tailwind" },
-  { icon: <DiGit />, label: "Git" },
+const categories = [
+  {
+    label: "Languages & Runtime",
+    skills: [
+      { icon: <SiTypescript />, label: "TypeScript" },
+      { icon: <DiJavascript1 />, label: "JavaScript" },
+      { icon: <DiPython />, label: "Python" },
+      { icon: <CgCPlusPlus />, label: "C++" },
+    ],
+  },
+  {
+    label: "Backend & API",
+    skills: [
+      { icon: <DiNodejs />, label: "Node.js" },
+      { icon: <SiExpress />, label: "Express" },
+      { icon: <SiNestjs />, label: "NestJS" },
+      { icon: <SiFastapi />, label: "FastAPI" },
+      { icon: <SiGraphql />, label: "GraphQL" },
+      { icon: <SiJsonwebtokens />, label: "JWT" },
+      { icon: <SiSocketdotio />, label: "WebSocket" },
+    ],
+  },
+  {
+    label: "Frontend",
+    skills: [
+      { icon: <DiReact />, label: "React" },
+      { icon: <SiNextdotjs />, label: "Next.js" },
+      { icon: <SiTailwindcss />, label: "Tailwind" },
+    ],
+  },
+  {
+    label: "Databases & Cache",
+    skills: [
+      { icon: <SiPostgresql />, label: "PostgreSQL" },
+      { icon: <DiMongodb />, label: "MongoDB" },
+      { icon: <SiMysql />, label: "MySQL" },
+      { icon: <SiRedis />, label: "Redis" },
+      { icon: <SiPrisma />, label: "Prisma" },
+      { icon: <SiFirebase />, label: "Firebase" },
+    ],
+  },
+  {
+    label: "Cloud & DevOps",
+    skills: [
+      { icon: <SiAmazonaws />, label: "AWS" },
+      { icon: <SiDocker />, label: "Docker" },
+      { icon: <DiGit />, label: "Git" },
+    ],
+  },
 ];
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      {skills.map((skill, index) => (
-        <Col
-          xs={4}
-          md={2}
-          className="tech-icons"
-          key={index}
-          data-aos="fade-up"
-          data-aos-delay={index * 50}
-        >
-          {skill.icon}
-          <p className="tech-icon-label">{skill.label}</p>
-        </Col>
+    <div style={{ paddingBottom: "50px" }}>
+      {categories.map((category, catIdx) => (
+        <div className="skill-category" key={catIdx} data-aos="fade-up" data-aos-delay={catIdx * 100}>
+          <p className="skill-category-label">{category.label}</p>
+          <Row style={{ justifyContent: "center" }}>
+            {category.skills.map((skill, index) => (
+              <Col
+                xs={4}
+                md={2}
+                className="tech-icons"
+                key={index}
+              >
+                {skill.icon}
+                <p className="tech-icon-label">{skill.label}</p>
+              </Col>
+            ))}
+          </Row>
+        </div>
       ))}
-    </Row>
+    </div>
   );
 }
 

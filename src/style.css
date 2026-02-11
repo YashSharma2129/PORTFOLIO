@@ -1065,3 +1065,63 @@ button:focus {
     padding: 20px 5px;
   }
 }
+
+/* --------- */
+/* Availability Badge */
+/* --------- */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  font-size: 0.85em;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+}
+
+/* --------- */
+/* Skill Category Headers */
+/* --------- */
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.skill-category-label {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  border-left: 3px solid #c770f0;
+  padding-left: 10px;
+}
