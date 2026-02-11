@@ -25,32 +25,17 @@ function Home2() {
               <br />
               <br />
               With <b className="purple">2+ years of experience</b>, I build
-              scalable, production-grade systems using
-              <i>
-                <b className="purple"> TypeScript, Node.js, PostgreSQL, and AWS.</b>
-              </i>
+              scalable, production-grade systems using{" "}
+              <b className="purple">TypeScript, Node.js, PostgreSQL, and AWS.</b>
               <br />
               <br />
-              My areas of interest include architecting robust{" "}
-              <i>
-                <b className="purple">Backend Systems & APIs</b>
-              </i>{" "}
-              and diving into fields like{" "}
-              <i>
-                <b className="purple">Cloud Infrastructure</b>
-              </i>{" "}
-              and <b className="purple">DevOps.</b>
-              <br />
-              <br />I enjoy building scalable backends using{" "}
-              <b className="purple">Node.js & Express</b> and creating interactive
-              frontends with{" "}
-              <i>
-                <b className="purple">React.js</b>
-              </i>{" "}
-              and <b className="purple">Next.js</b>.
-              <br />
-              <br />
-              <span className="purple" style={{ fontWeight: 600 }}>8+ shipped projects</span> · <span className="purple" style={{ fontWeight: 600 }}>10+ REST APIs</span> · <span className="purple" style={{ fontWeight: 600 }}>Deployed on AWS</span>
+              I specialize in architecting{" "}
+              <b className="purple">Backend Systems, REST APIs, </b>
+              and{" "}
+              <b className="purple">Cloud Infrastructure</b>
+              {" "}— and love building polished frontends with{" "}
+              <b className="purple">React.js</b> and{" "}
+              <b className="purple">Next.js</b>.
               <br />
               <br />I believe in constantly learning, building, and owning
               systems end-to-end — from design to production!

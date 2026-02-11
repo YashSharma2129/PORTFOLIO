@@ -122,7 +122,7 @@ function Experience() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading" data-aos="fade-up">
           My Professional <strong className="purple">Experience</strong>
         </h1>
         <p style={{ color: "white" }}>
@@ -135,6 +135,8 @@ function Experience() {
             <div
               className={`exp-timeline-item ${index % 2 === 0 ? "left" : "right"}`}
               key={index}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-delay={index * 100}
             >
               <div className="exp-timeline-dot" />
               <div className="exp-timeline-card">

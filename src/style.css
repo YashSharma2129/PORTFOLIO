@@ -293,7 +293,26 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  background: linear-gradient(90deg, #c770f0, #e040fb, #7c4dff, #c770f0);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerName 4s ease infinite;
+}
+
+@keyframes shimmerName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .Typewriter__wrapper {
@@ -481,14 +500,34 @@ button:focus {
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
+  transition: all 0.4s ease 0s !important;
   height: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.project-card-view::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, transparent 30%, rgba(199, 112, 240, 0.3) 50%, transparent 70%);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .project-card-view:hover {
   transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  box-shadow: 0 4px 15px 5px rgba(199, 112, 240, 0.35) !important;
+  opacity: 1 !important;
+}
+
+.project-card-view:hover::before {
+  opacity: 1;
 }
 
 .blog-card {
@@ -920,13 +959,17 @@ button:focus {
 /* Tech Icon Labels */
 /* --------- */
 .tech-icon-label {
-  font-size: 0.75em !important;
+  font-size: 0.58em !important;
   color: rgba(199, 112, 240, 0.85) !important;
-  margin-top: 8px !important;
+  margin-top: 6px !important;
   margin-bottom: 0 !important;
   font-weight: 500 !important;
-  letter-spacing: 0.5px !important;
+  letter-spacing: 0.3px !important;
   text-align: center !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
 }
 
 .tech-icons {
@@ -934,6 +977,7 @@ button:focus {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  overflow: hidden !important;
 }
 
 /* --------- */
@@ -965,4 +1009,59 @@ button:focus {
   background: rgba(199, 112, 240, 0.2);
   border-color: #c770f0;
   transform: translateY(-1px);
+}
+
+/* --------- */
+/* Stats Counter Section */
+/* --------- */
+.stats-section {
+  padding: 30px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats-row {
+  background: rgba(199, 112, 240, 0.06);
+  border: 1px solid rgba(199, 112, 240, 0.2);
+  border-radius: 16px;
+  padding: 30px 10px;
+  backdrop-filter: blur(10px);
+}
+
+.stats-item {
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.stats-number {
+  font-size: 2.8em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #c770f0 0%, #e040fb 50%, #7c4dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+.stats-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .stats-number {
+    font-size: 2em;
+  }
+
+  .stats-label {
+    font-size: 0.72em;
+  }
+
+  .stats-row {
+    padding: 20px 5px;
+  }
 }

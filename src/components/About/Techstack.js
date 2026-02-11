@@ -8,8 +8,6 @@ import {
   DiMongodb,
   DiPython,
   DiGit,
-  DiHtml5,
-  DiCss3,
 } from "react-icons/di";
 import {
   SiRedis,
@@ -23,12 +21,18 @@ import {
   SiAmazonaws,
   SiNestjs,
   SiFastapi,
+  SiExpress,
+  SiPrisma,
+  SiJsonwebtokens,
+  SiSocketdotio,
+  SiFirebase,
 } from "react-icons/si";
 
 const skills = [
   { icon: <SiTypescript />, label: "TypeScript" },
   { icon: <DiJavascript1 />, label: "JavaScript" },
   { icon: <DiNodejs />, label: "Node.js" },
+  { icon: <SiExpress />, label: "Express" },
   { icon: <DiReact />, label: "React" },
   { icon: <SiNextdotjs />, label: "Next.js" },
   { icon: <SiNestjs />, label: "NestJS" },
@@ -36,16 +40,18 @@ const skills = [
   { icon: <SiPostgresql />, label: "PostgreSQL" },
   { icon: <DiMongodb />, label: "MongoDB" },
   { icon: <SiMysql />, label: "MySQL" },
+  { icon: <SiPrisma />, label: "Prisma" },
   { icon: <SiRedis />, label: "Redis" },
+  { icon: <SiGraphql />, label: "GraphQL" },
   { icon: <SiAmazonaws />, label: "AWS" },
   { icon: <SiDocker />, label: "Docker" },
+  { icon: <SiJsonwebtokens />, label: "JWT" },
+  { icon: <SiSocketdotio />, label: "WebSocket" },
+  { icon: <SiFirebase />, label: "Firebase" },
   { icon: <DiPython />, label: "Python" },
   { icon: <CgCPlusPlus />, label: "C++" },
-  { icon: <SiGraphql />, label: "GraphQL" },
   { icon: <SiTailwindcss />, label: "Tailwind" },
   { icon: <DiGit />, label: "Git" },
-  { icon: <DiHtml5 />, label: "HTML5" },
-  { icon: <DiCss3 />, label: "CSS3" },
 ];
 
 function Techstack() {
