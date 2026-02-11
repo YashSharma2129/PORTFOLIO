@@ -13,6 +13,18 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
+
+        {/* Tech Stack Tags */}
+        {props.techStack && props.techStack.length > 0 && (
+          <div className="tech-tag-container">
+            {props.techStack.map((tech, index) => (
+              <span className="tech-tag" key={index}>
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+
         {props.ghLink && (
           <Button variant="primary" href={props.ghLink} target="_blank">
             <BsGithub /> &nbsp;
@@ -21,7 +33,6 @@ function ProjectCards(props) {
         )}
         {"\n"}
         {"\n"}
-
 
         {!props.isBlog && props.demoLink && (
           <Button

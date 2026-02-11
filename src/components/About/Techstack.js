@@ -25,69 +25,45 @@ import {
   SiFastapi,
 } from "react-icons/si";
 
+const skills = [
+  { icon: <SiTypescript />, label: "TypeScript" },
+  { icon: <DiJavascript1 />, label: "JavaScript" },
+  { icon: <DiNodejs />, label: "Node.js" },
+  { icon: <DiReact />, label: "React" },
+  { icon: <SiNextdotjs />, label: "Next.js" },
+  { icon: <SiNestjs />, label: "NestJS" },
+  { icon: <SiFastapi />, label: "FastAPI" },
+  { icon: <SiPostgresql />, label: "PostgreSQL" },
+  { icon: <DiMongodb />, label: "MongoDB" },
+  { icon: <SiMysql />, label: "MySQL" },
+  { icon: <SiRedis />, label: "Redis" },
+  { icon: <SiAmazonaws />, label: "AWS" },
+  { icon: <SiDocker />, label: "Docker" },
+  { icon: <DiPython />, label: "Python" },
+  { icon: <CgCPlusPlus />, label: "C++" },
+  { icon: <SiGraphql />, label: "GraphQL" },
+  { icon: <SiTailwindcss />, label: "Tailwind" },
+  { icon: <DiGit />, label: "Git" },
+  { icon: <DiHtml5 />, label: "HTML5" },
+  { icon: <DiCss3 />, label: "CSS3" },
+];
+
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTypescript />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNestjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFastapi />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonaws />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDocker />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGraphql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTailwindcss />
-      </Col>
+      {skills.map((skill, index) => (
+        <Col
+          xs={4}
+          md={2}
+          className="tech-icons"
+          key={index}
+          data-aos="fade-up"
+          data-aos-delay={index * 50}
+        >
+          {skill.icon}
+          <p className="tech-icon-label">{skill.label}</p>
+        </Col>
+      ))}
     </Row>
   );
 }

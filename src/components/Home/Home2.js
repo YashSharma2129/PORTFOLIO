@@ -14,7 +14,7 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col md={8} className="home-about-description" data-aos="fade-right">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
@@ -49,6 +49,9 @@ function Home2() {
               </i>{" "}
               and <b className="purple">Next.js</b>.
               <br />
+              <br />
+              <span className="purple" style={{ fontWeight: 600 }}>8+ shipped projects</span> · <span className="purple" style={{ fontWeight: 600 }}>10+ REST APIs</span> · <span className="purple" style={{ fontWeight: 600 }}>Deployed on AWS</span>
+              <br />
               <br />I believe in constantly learning, building, and owning
               systems end-to-end — from design to production!
             </p>
@@ -60,7 +63,7 @@ function Home2() {
           </Col>
         </Row>
         <Row>
-          <Col md={12} className="home-about-social">
+          <Col md={12} className="home-about-social" data-aos="fade-up">
             <h1>FIND ME ON</h1>
             <p>
               Feel free to <span className="purple">connect </span>with me

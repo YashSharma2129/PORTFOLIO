@@ -35,10 +35,9 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build systems that are scalable, reliable, and impactful."{" "}
+          <p style={{ color: "rgb(155 126 172)", fontStyle: "italic" }}>
+            "Ship fast, own the full stack, and never stop learning."
           </p>
-          <footer className="blockquote-footer">Yash Sharma</footer>
         </blockquote>
 
       </Card.Body>

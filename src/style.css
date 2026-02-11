@@ -915,3 +915,54 @@ button:focus {
 .certification-card-view .card-title {
   font-size: 1.1em !important;
 }
+
+/* --------- */
+/* Tech Icon Labels */
+/* --------- */
+.tech-icon-label {
+  font-size: 0.75em !important;
+  color: rgba(199, 112, 240, 0.85) !important;
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-align: center !important;
+}
+
+.tech-icons {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* --------- */
+/* Tech Stack Tags on Project Cards */
+/* --------- */
+.tech-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 15px;
+  margin-top: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.72em;
+  font-weight: 500;
+  color: #c770f0;
+  border: 1px solid rgba(199, 112, 240, 0.35);
+  border-radius: 20px;
+  background: rgba(199, 112, 240, 0.08);
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tech-tag:hover {
+  background: rgba(199, 112, 240, 0.2);
+  border-color: #c770f0;
+  transform: translateY(-1px);
+}
