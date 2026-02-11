@@ -16,14 +16,14 @@ function Projects() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading" data-aos="fade-up">
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={illusora}
               isBlog={false}
@@ -33,7 +33,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={omrestocks}
               isBlog={false}
@@ -43,7 +43,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={studytable}
               isBlog={false}
@@ -53,7 +53,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={yashify}
               isBlog={false}
@@ -63,7 +63,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={hotel}
               isBlog={false}
@@ -73,7 +73,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={openCVProject}
               isBlog={false}
@@ -82,7 +82,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={isl}
               isBlog={false}
@@ -92,7 +92,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="project-card" data-aos="fade-up">
             <ProjectCard
               imgPath={shorturl}
               isBlog={false}

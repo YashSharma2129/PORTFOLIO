@@ -8,14 +8,14 @@ function Certifications() {
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="project-heading" data-aos="fade-up">
           My <strong className="purple">Certifications</strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few certifications I have earned:
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="Postman API Fundamentals Student Expert"
               description="Enhanced understanding of APIs and backend development, covering API usage, testing, and Postman tools."
@@ -25,7 +25,7 @@ function Certifications() {
             />
           </Col>
 
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="Build an AI Text Summarizer App"
               description="Developed an AI-powered text summarizer using Replit, Node.js, Express, and the Hugging Face API."
@@ -35,7 +35,7 @@ function Certifications() {
             />
           </Col>
 
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="Career Essentials in Generative AI"
               description="Foundational understanding of Generative AI, including techniques and use cases for AI across various industries."
@@ -45,7 +45,7 @@ function Certifications() {
             />
           </Col>
 
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="DevOps Foundations"
               description="Comprehensive understanding of DevOps principles, CI/CD pipelines, containerization, and infrastructure automation."
@@ -54,7 +54,7 @@ function Certifications() {
             />
           </Col>
 
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="Full-Stack Web Developer"
               description="Comprehensive learning path covering both frontend and backend web development skills, including React, Node.js, Express, and databases."
@@ -64,7 +64,7 @@ function Certifications() {
             />
           </Col>
 
-          <Col md={4} className="certification-card">
+          <Col md={4} className="certification-card" data-aos="fade-up">
             <CertificationCard
               title="Problem Solving (Intermediate)"
               description="Demonstrated intermediate-level problem-solving skills through algorithmic challenges and data structure implementations."

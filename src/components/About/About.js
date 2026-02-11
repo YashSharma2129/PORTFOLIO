@@ -21,8 +21,8 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }} data-aos="fade-right">
+              About <strong className="purple">Me</strong>
             </h1>
             <Aboutcard />
           </Col>
@@ -34,13 +34,13 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
+        <h1 className="project-heading" data-aos="fade-up">
           Professional <strong className="purple">Skillset </strong>
         </h1>
 
         <Techstack />
 
-        <h1 className="project-heading">
+        <h1 className="project-heading" data-aos="fade-up">
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />

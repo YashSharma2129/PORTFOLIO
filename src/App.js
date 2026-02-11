@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
@@ -53,6 +55,26 @@ function App() {
     };
   }, []);
 
+  // AOS scroll animations
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 80,
+    });
+  }, []);
+
+  // Back to top button
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setShowTop(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <Router>
       <Preloader load={load} />
@@ -69,6 +91,15 @@ function App() {
           <Route path="/experience" element={<Experience />} />
         </Routes>
         <Footer />
+        {showTop && (
+          <button
+            className="back-to-top"
+            onClick={scrollToTop}
+            aria-label="Back to top"
+          >
+            ↑
+          </button>
+        )}
       </div>
     </Router>
   );
