@@ -4,6 +4,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -12,6 +13,22 @@ function Footer() {
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
+      {/* Contact CTA Section */}
+      <div className="footer-cta" data-aos="fade-up">
+        <h2 className="footer-cta-heading">
+          Let's <span className="purple">Build</span> Something Together
+        </h2>
+        <p className="footer-cta-text">
+          Looking for a full stack engineer who ships fast and owns systems end-to-end?
+        </p>
+        <a
+          href="mailto:yash25578@gmail.com"
+          className="footer-cta-button"
+        >
+          <AiOutlineMail style={{ marginBottom: "2px" }} /> Get In Touch
+        </a>
+      </div>
+
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Designed and Developed by Yash Sharma</h3>

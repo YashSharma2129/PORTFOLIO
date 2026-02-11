@@ -18,9 +18,15 @@ function CertificationCard(props) {
           <strong>Completion Date:</strong> {props.completionDate}
         </Card.Text>
         {props.certLink && (
-          <Button variant="primary" href={props.certLink} target="_blank">
-            <BsFillAwardFill /> &nbsp; View Certification
-          </Button>
+          <>
+            <div className="cert-verified">
+              <span className="cert-verified-dot"></span>
+              Verified Credential
+            </div>
+            <Button variant="primary" href={props.certLink} target="_blank" style={{ marginTop: "8px" }}>
+              <BsFillAwardFill /> &nbsp; View Certification
+            </Button>
+          </>
         )}
       </Card.Body>
     </Card>
