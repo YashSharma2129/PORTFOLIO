@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
-import profile1 from "../../Assets/WhatsApp Image 2024-12-27 at 10.58.32_4732123a.jpg
-import profile2 from "../../Assets/WhatsApp Image 2024-12-26 at 23.22.14_13cebc77.jpg
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -22,35 +20,37 @@ function Home2() {
             </h1>
             <p className="home-about-body">
               Hello! I am <span className="purple">Yash Sharma</span>, a
-              passionate backend and full-stack developer from{" "}
-              <span className="purple">Delhi NCR, India</span>.
+              backend-leaning full stack engineer based in{" "}
+              <span className="purple">Pune, Maharashtra, India</span>.
               <br />
-              <br />I have experience working with technologies like
+              <br />
+              With <b className="purple">2+ years of experience</b>, I build
+              scalable, production-grade systems using
               <i>
-                <b className="purple"> Python, JavaScript, Node.js, and C++.</b>
+                <b className="purple"> TypeScript, Node.js, PostgreSQL, and AWS.</b>
               </i>
               <br />
               <br />
-              My areas of interest include developing robust{" "}
+              My areas of interest include architecting robust{" "}
               <i>
-                <b className="purple">Web Applications</b>
+                <b className="purple">Backend Systems & APIs</b>
               </i>{" "}
               and diving into fields like{" "}
               <i>
-                <b className="purple">Artificial Intelligence</b>
+                <b className="purple">Cloud Infrastructure</b>
               </i>{" "}
-              and <b className="purple">APIs.</b>
+              and <b className="purple">DevOps.</b>
               <br />
               <br />I enjoy building scalable backends using{" "}
-              <b className="purple">Node.js</b> and creating interactive
-              frontends with frameworks like{" "}
+              <b className="purple">Node.js & Express</b> and creating interactive
+              frontends with{" "}
               <i>
                 <b className="purple">React.js</b>
               </i>{" "}
               and <b className="purple">Next.js</b>.
               <br />
-              <br />I believe in constantly learning, building, and striving for
-              excellence in every project I take up!
+              <br />I believe in constantly learning, building, and owning
+              systems end-to-end — from design to production!
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -59,29 +59,6 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
-
-        {/* Section to Add Photos */}
-        <Row className="photo-section">
-          <Col md={6} className="photo-column">
-            <Tilt>
-              <img
-                src={profile1}
-                alt="Profile 1"
-                className="img-fluid rounded-photo"
-              />
-            </Tilt>
-          </Col>
-          <Col md={6} className="photo-column">
-            <Tilt>
-              <img
-                src={profile2}
-                alt="Profile 2"
-                className="img-fluid rounded-photo"
-              />
-            </Tilt>
-          </Col>
-        </Row>
-
         <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>

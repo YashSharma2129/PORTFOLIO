@@ -2,11 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import illusora from "../../Assets/Projects/illusora.png";
+import omrestocks from "../../Assets/Projects/omrestocks.png";
+import studytable from "../../Assets/Projects/studytable.png";
 import hotel from "../../Assets/Projects/hotel.jpg";
 import shorturl from "../../Assets/Projects/shorturl.png";
 import yashify from "../../Assets/Projects/Yashifyy.png";
 import isl from "../../Assets/Projects/isl.png";
-import registrationForm from "../../Assets/Projects/registrationForm.png";
 import openCVProject from "../../Assets/Projects/openCVProject.jpg";
 
 function Projects() {
@@ -23,11 +25,51 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={illusora}
+              isBlog={false}
+              title="Illusora"
+              description="Production web platform for a handcrafted jewelry startup. Solely designed and delivered the complete website including public-facing pages, authentication flows, internal admin dashboards, SEO optimizations, and Google Analytics. Deployed on AWS EC2 & RDS."
+              demoLink="https://illusora.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={omrestocks}
+              isBlog={false}
+              title="OMRE (OM Restocks)"
+              description="AI-powered stock analytics platform combining 12 years of historical data, institutional patterns, and news sentiment into a single stability score. Features include real-time market indices, stock screener, paper trading, leaderboard, and AI predictions."
+              demoLink="https://omrestocks.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={studytable}
+              isBlog={false}
+              title="StudyTable AI"
+              description="EdTech platform providing AI-powered study guidance for Board and Entrance exams (JEE, NEET, BITSAT, etc.). Built the complete website and backend, including smart scheduling, daily practice tracking, blogs, sample papers, and college counselling features. Handled full deployment and DevOps."
+              demoLink="https://studytable.ai/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={yashify}
               isBlog={false}
-              title="Yashify"
-              description="A blogging platform where users can create detailed profiles, post blogs, and engage through comments. Features include user authentication, profile management, and tracking of followers and posts."
+              title="Leitner System"
+              description="Flashcard-based learning platform implementing spaced repetition algorithms for efficient knowledge retention. Built with a full-stack architecture for managing decks, tracking progress, and optimizing review schedules."
               ghLink="https://github.com/YashSharma2129/Yashify"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hotel}
+              isBlog={false}
+              title="Greencart"
+              description="Logistics and order management platform with driver assignment, delivery tracking, and real-time order status updates. Built for efficient last-mile delivery operations."
+              demoLink="https://greencart-frontend-sage.vercel.app"
             />
           </Col>
 
@@ -36,17 +78,7 @@ function Projects() {
               imgPath={openCVProject}
               isBlog={false}
               title="AI Buddy"
-              description="A project integrating Flask backend with React frontend, using OpenCV for image processing. Features AI-based enhancements and real-time image editing for a seamless user experience."
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={hotel}
-              isBlog={false}
-              title="Hotel Management System"
-              description="A database management system for handling hotel operations, including room bookings, customer records, and staff management. Built as part of a database coursework project."
-              ghLink="https://github.com/YashSharma2129/Hotel"
+              description="AI-powered fitness assistant with posture detection and repetition tracking using computer vision. Integrates Flask backend with React frontend, leveraging OpenCV and MediaPipe for real-time exercise analysis."
             />
           </Col>
 
@@ -54,10 +86,12 @@ function Projects() {
             <ProjectCard
               imgPath={isl}
               isBlog={false}
-              title="Indian Sign Language Translator"
-              description="A real-time Indian Sign Language (ISL) to text and speech translator built using Python and OpenCV, helping bridge communication gaps for the deaf and hard-of-hearing community."
+              title="Talenrn LMS"
+              description="Learning Management System with authentication, role-based dashboards, and course workflows. Features student/mentor interfaces, real-time WebSocket features, and cloud deployments on AWS."
+              demoLink="https://talenrn-lms-frontend.vercel.app"
             />
           </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={shorturl}
@@ -65,15 +99,6 @@ function Projects() {
               title="Short URL"
               description="A platform to shorten URLs and manage them with easy access to the link statistics."
               ghLink="https://github.com/YashSharma2129/short_URl"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={registrationForm}
-              isBlog={false}
-              title="Registration Form"
-              description="A user registration form with frontend CRUD operations. This project allows users to submit a registration form, view a list of users, and edit or delete entries. It integrates frontend form validation and communication with a backend for data storage and management."
-              ghLink="https://github.com/YashSharma2129/Registraion_form" // GitHub repository link
             />
           </Col>
         </Row>
