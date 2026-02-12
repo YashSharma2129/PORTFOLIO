@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import "./Experience.css";
@@ -128,6 +128,53 @@ const experiences = [
 ];
 
 function Experience() {
+  const timelineRef = useRef(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(new Set());
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+
+      const timeline = timelineRef.current;
+      const rect = timeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Calculate scroll progress through the timeline
+      const timelineTop = rect.top;
+      const timelineHeight = rect.height;
+      const scrolled = windowHeight - timelineTop;
+      const progress = Math.min(
+        Math.max(scrolled / (timelineHeight + windowHeight * 0.3), 0),
+        1
+      );
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = entry.target.getAttribute("data-index");
+            setVisibleCards((prev) => new Set([...prev, idx]));
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const cards = document.querySelectorAll(".exp-timeline-item");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -140,15 +187,24 @@ function Experience() {
           internships.
         </p>
 
-        <div className="exp-timeline">
+        <div className="exp-timeline" ref={timelineRef}>
+          {/* Animated scroll-fill line */}
+          <div
+            className="exp-timeline-progress"
+            style={{ height: `${scrollProgress * 100}%` }}
+          />
+
           {experiences.map((exp, index) => (
             <div
-              className={`exp-timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+              className={`exp-timeline-item ${index % 2 === 0 ? "left" : "right"} ${visibleCards.has(String(index)) ? "visible" : ""
+                }`}
               key={index}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={index * 100}
+              data-index={index}
             >
-              <div className="exp-timeline-dot" />
+              <div
+                className={`exp-timeline-dot ${visibleCards.has(String(index)) ? "active" : ""
+                  }`}
+              />
               <div className="exp-timeline-card">
                 <div className="exp-timeline-header">
                   <h3 className="exp-timeline-title">{exp.title}</h3>
@@ -172,7 +228,9 @@ function Experience() {
                 {exp.tech && exp.tech.length > 0 && (
                   <div className="exp-tech-tags">
                     {exp.tech.map((t, i) => (
-                      <span className="exp-tech-tag" key={i}>{t}</span>
+                      <span className="exp-tech-tag" key={i}>
+                        {t}
+                      </span>
                     ))}
                   </div>
                 )}
